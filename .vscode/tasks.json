@@ -1,0 +1,31 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build simple.cpp",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++17",
+                "-Wall",
+                "-Wextra",
+                "-pedantic",
+                "simple.cpp",
+                "-o",
+                "simple.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "run simple.exe",
+            "type": "shell",
+            "command": ".\\simple.exe",
+            "dependsOn": "build simple.cpp",
+            "problemMatcher": []
+        }
+    ]
+}
